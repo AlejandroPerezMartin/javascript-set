@@ -11,7 +11,7 @@ Load the script before using it.
 
 In the below example, the script is loaded in the head of an HTML file:
 
-```
+```html
 <html>
     <head>
       ...
@@ -69,7 +69,7 @@ Empties Set: `mySet.clear()`
 ## Example of use
 Comments represent outputs:
 
-```
+```javascript
 
 var mySet = new Set();
 
