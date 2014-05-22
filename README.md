@@ -44,7 +44,7 @@ _If the object is already in the Set it's not added._
 - ### addAll()
 Inserts an array of objects into the Set
 `mySet.addAll(["bar", 1, 2, 3, [4, "five"], "six"])`
-_Objects that are already in the Set are not added to the Set._
+_Objects that are already in the Set are not added._
 
 - ### remove()
 Removes object from Set: `mySet.remove("foo")`
