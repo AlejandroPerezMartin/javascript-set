@@ -133,7 +133,7 @@ Set.prototype.remove = function(key) {
         index = this.set.indexOf(key);
 
     for (var i = 0, len = this.size(); i < len; i += 1) {
-        if (i != index) {
+        if (i !== index) {
             arr.push(this.set[i]);
         }
     }
