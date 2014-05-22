@@ -35,35 +35,32 @@ Returns the set as an array `mySet.getSet()`
 Returns number of elements in the Set `mySet.size()`
 
 - ### get()
-Returns the n-th object in the set `mySet.getSet(3)`
+Returns the n-th object in the set `mySet.getSet(3)`:
 
 - ### add()
 Inserts single objects into the Set
 `mySet.add("foo")`.
-
 _If the object is already in the Set it's not added._
 
 - ### addAll()
 Inserts an array of objects into the Set
 `mySet.addAll(["bar", 1, 2, 3, [4, "five"], "six"])`
-
 _Objects that are already in the Set are not added to the Set._
 
 - ### remove()
 Removes object from Set: `mySet.remove("foo")`
 
 - ### removeAll()
-Removes an array of objects from the Set: `mySet.removeAll([1, 2, "six"])`
+Removes an array of objects from the Set: `mySet.removeAll([1, 2, "six"])`.
 
 - ### contains()
-Returns true if key is in the set, otherwise false `mySet.contains("foo")`
+Returns true if key is in the set, otherwise false `mySet.contains("foo")`.
 
 - ### containsAll()
-Returns true if all the elements of the given array are contained in the set, otherwise false `mySet.containsAll([1, 2, "six"])`
+Returns true if all the elements of the given array are contained in the set, otherwise false `mySet.containsAll([1, 2, "six"]);`.
 
 - ### sort()
 Sort elements of set `mySet.sort()`
-
 **ONLY WORKS WELL WHEN ALL ELEMENTS ARE OF THE SAME TYPE!**
 
 - ### clear()
@@ -97,12 +94,10 @@ mySet.contains(4); // true
 mySet.containsAll(["bar", 4]); // false
 mySet.containsAll([4, 3]); // true
 
-mySet.add(1); // [3, 4, 1]
-
-mySet.sort(); // [1, 3, 4]
+mySet.sort(); // 
 
 mySet.clear(); // []
 ```
 
 ## Author
-Alejandro Perez Martin [https://www.linkedin.com/in/aleperez92]
+Alejandro Perez Martin: https://www.linkedin.com/in/aleperez92
