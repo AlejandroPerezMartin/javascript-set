@@ -1,4 +1,4 @@
-Javascript Set (JS-Set)
+JavaScript Set (JS-Set)
 =======================
 
 JavaScript implementation of Set, a data structure to store non-repeated values.
