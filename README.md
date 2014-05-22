@@ -3,7 +3,6 @@ Javascript Set (JS-Set)
 
 JavaScript implementation of Set, a data structure to store non-repeated values.
 
-***
 
 ## Include in your project
 
