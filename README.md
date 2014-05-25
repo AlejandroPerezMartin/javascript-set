@@ -58,10 +58,6 @@ Returns true if key is in the set, otherwise false `mySet.contains("foo")`.
 - ### containsAll()
 Returns true if all the elements of the given array are contained in the set, otherwise false `mySet.containsAll([1, 2, "six"]);`.
 
-- ### sort()
-Sort elements of set `mySet.sort()`
-**ONLY WORKS WELL WHEN ALL ELEMENTS ARE OF THE SAME TYPE!**
-
 - ### clear()
 Empties Set: `mySet.clear()`
 
@@ -91,9 +87,7 @@ mySet.contains("bar"); // false
 mySet.contains(4); // true
 
 mySet.containsAll(["bar", 4]); // false
-mySet.containsAll([4, 3]); // true
-
-mySet.sort(); // 
+mySet.containsAll([4, 3]); // trues
 
 mySet.clear(); // []
 ```
