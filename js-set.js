@@ -17,20 +17,23 @@
  * Constructor
  */
 function Set() {
+    'use strict';
     this.set = [];
 }
 
 /**
  * Returns the set of objects as an array
  */
-Set.prototype.getSet = function() {
+Set.prototype.getSet = function () {
+    'use strict';
     return this.set;
 };
 
 /**
  * Returns number of items in the set
  */
-Set.prototype.size = function() {
+Set.prototype.size = function () {
+    'use strict';
     return this.set.length;
 };
 
@@ -39,21 +42,24 @@ Set.prototype.size = function() {
  *
  * @param Integer
  */
-Set.prototype.get = function(index) {
+Set.prototype.get = function (index) {
+    'use strict';
     return this.set[index];
 };
 
 /**
  * Returns true if the set is empty, otherwise false
  */
-Set.prototype.isEmpty = function() {
+Set.prototype.isEmpty = function () {
+    'use strict';
     return (this.set.length <= 0);
 };
 
 /**
  * Empties set
  */
-Set.prototype.clear = function() {
+Set.prototype.clear = function () {
+    'use strict';
     this.set = [];
     return this;
 };
@@ -63,8 +69,9 @@ Set.prototype.clear = function() {
  *
  * @param Object
  */
-Set.prototype.contains = function(key) {
-    return (key !== null && key !== undefined && this.set.indexOf(key) !== -1);
+Set.prototype.contains = function (key) {
+    'use strict';
+    return (key && this.set.indexOf(key) !== -1);
 };
 
 /**
@@ -72,8 +79,9 @@ Set.prototype.contains = function(key) {
  *
  * @param Array
  */
-Set.prototype.containsAll = function(values) {
-    if (values !== null && values !== undefined && values instanceof Array) {
+Set.prototype.containsAll = function (values) {
+    'use strict';
+    if (values && values instanceof Array) {
         for (var i = 0, len = values.length; i < len; i += 1) {
             if (!this.contains(values[i])) {
                 return false;
@@ -85,12 +93,13 @@ Set.prototype.containsAll = function(values) {
 };
 
 /**
- * Add element to the set
+ * Adds an element to the set
  *
  * @param Object
  */
-Set.prototype.add = function(key) {
-    if (key !== null && key !== undefined) {
+Set.prototype.add = function (key) {
+    'use strict';
+    if (key) {
         if (!this.contains(key)) {
             this.set.push(key);
         }
@@ -99,12 +108,13 @@ Set.prototype.add = function(key) {
 };
 
 /**
- * Add elements of the array to the set
+ * Adds an array of objects to the set
  *
  * @param Array
  */
-Set.prototype.addAll = function(values) {
-    if (values !== null && values !== undefined && values instanceof Array) {
+Set.prototype.addAll = function (values) {
+    'use strict';
+    if (values && values instanceof Array) {
         for (var i = 0, len = values.length; i < len; i += 1) {
             if (!this.contains(values[i])) {
                 this.add(values[i]);
@@ -115,44 +125,36 @@ Set.prototype.addAll = function(values) {
 };
 
 /**
- * Sort elements of set (ONLY WORKS WELL WHEN ALL ELEMENTS ARE OF THE SAME TYPE!)
- */
-Set.prototype.sort = function() {
-    return (this.set.sort(function(a, b) {
-        return a - b;
-    }));
-}
-
-/**
- * Remove element from set
+ * Removes element from set
  *
  * @param Object
  */
-Set.prototype.remove = function(key) {
-    var arr = [],
-        index = this.set.indexOf(key);
+Set.prototype.remove = function (key) {
+    'use strict';
+    if (key && this.contains(key)) {
+        var arr = [],
+            index = this.set.indexOf(key);
 
-    for (var i = 0, len = this.size(); i < len; i += 1) {
-        if (i !== index) {
-            arr.push(this.set[i]);
+        for (var i = 0, len = this.size(); i < len; i += 1) {
+            if (i !== index) {
+                arr.push(this.set[i]);
+            }
         }
+        this.set = arr;
     }
-
-    this.set = arr;
     return this;
 };
 
 /**
- * Remove all the keys from Set
+ * Removes from the set all of its elements that are contained in the specified array
  *
  * @param Array
  */
-Set.prototype.removeAll = function(values) {
-    if (values !== null && values !== undefined && values instanceof Array) {
+Set.prototype.removeAll = function (values) {
+    'use strict';
+    if (values && values instanceof Array) {
         for (var i = 0, len = values.length; i < len; i += 1) {
-            if (this.contains(values[i])) {
-                this.remove(values[i]);
-            }
+            this.remove(values[i]);
         }
     }
     return this;
