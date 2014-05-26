@@ -21,7 +21,7 @@ In the below example, the script is loaded in the head of an HTML file:
 </html>
 ```
 
-## Create an instance of Set
+## Create an instance of JS-Set
 To create an instance of the JS-Set and start using it, just type: `var mySet = new Set();`
 
 ## Methods
