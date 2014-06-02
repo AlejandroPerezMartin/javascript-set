@@ -5,7 +5,7 @@
  * @name          JavaScript Set (JS-Set)
  * @description   Data structure to store non-repeated values
  * @version       1.0.0
- * @build         June 22, 2014
+ * @build         May 26, 2014
  * @url           http://github.com/alejandroperezmartin/js-set
  *
  * @author        Alejandro Perez Martin
