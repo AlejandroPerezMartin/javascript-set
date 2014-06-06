@@ -6,7 +6,7 @@
  * @description   Data structure to store non-repeated values
  * @version       1.0.2
  * @build         Jun 6, 2014
- * @url           http://github.com/alejandroperezmartin/js-set
+ * @url           https://github.com/AlejandroPerezMartin/javascript-set
  *
  * @author        Alejandro Perez Martin
  * @authorUrl     https://www.linkedin.com/in/aleperez92
