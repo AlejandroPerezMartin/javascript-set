@@ -8,7 +8,7 @@ JavaScript implementation of Set, a data structure to store non-repeated values.
 
 Load the script before using it.
 
-In the below example, the script is loaded in the head of an HTML file:
+In the example below, the script is loaded in the head of an HTML file:
 
 ```html
 <html>
