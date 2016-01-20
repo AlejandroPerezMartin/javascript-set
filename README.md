@@ -69,7 +69,7 @@ Comments represent outputs:
 var mySet = new Set();
 
 mySet.add("foo"); // ["foo"]
-mySet.add("foo"); // ["foo"] not added
+mySet.add("foo"); // ["foo"] not added, already in the Set
 
 mySet.addAll(["foo", 1, 2, "bar", 3, 4]); // ["foo", 1, 2, "bar", 3, 4]
 
@@ -87,7 +87,10 @@ mySet.contains("bar"); // false
 mySet.contains(4); // true
 
 mySet.containsAll(["bar", 4]); // false
-mySet.containsAll([4, 3]); // trues
+mySet.containsAll([4, 3]); // true
+
+// Method chaining
+mySet.add(1).add(2).remove(2).addAll([3, 4, 5]).getSet(); // [1, 3, 4, 5]
 
 mySet.clear(); // []
 ```
