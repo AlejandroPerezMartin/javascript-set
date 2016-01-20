@@ -22,7 +22,7 @@
      */
     var Set = function Set() {
         this.set = [];
-    }
+    };
 
     /**
      * Returns the set of objects as an array
